@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Sync With Hugging Face Hub
 
 on:
   push:
