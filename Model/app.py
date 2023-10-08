@@ -1,3 +1,7 @@
+import os
+
+os.system("pip install keras")
+
 import keras
 import gradio as gr
 
