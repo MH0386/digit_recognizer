@@ -1,11 +1,8 @@
 import os
 
 os.system("pip install --upgrade pip")
-os.system("clear")
 os.system("pip install tensorflow")
-os.system("clear")
 os.system("pip install keras")
-os.system("clear")
 
 import keras
 import gradio as gr
@@ -26,3 +23,5 @@ gr.Interface(
     outputs=gr.Label(),
     title="Predict from 0 to 9",
 ).launch(share=True)
+
+os.system("gradio deploy")
