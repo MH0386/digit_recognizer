@@ -20,4 +20,4 @@ jobs:
         github_repo_id: 'MH0386/digit_recognizer'
         huggingface_repo_id: 'MH0386/digit_recognizer'
         hf_token: ${{ secrets.HF_TOKEN }}
-    - uses: git clone https://huggingface.co/spaces/MH0386/digit_recognizer
+    - run: git clone https://huggingface.co/spaces/MH0386/digit_recognizer
