@@ -7,11 +7,8 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Sync With Hugging Face Hub
@@ -21,5 +18,3 @@ jobs:
         huggingface_repo_id: 'MH0386/digit_recognizer'
         hf_token: ${{ secrets.HF_TOKEN }}
         subdirectory: 'Model'
-    - run: git clone https://huggingface.co/spaces/MH0386/digit_recognizer
-    - run: git push
