@@ -4,6 +4,7 @@ import gradio as gr
 
 os.system("pip install --upgrade pip")
 os.system("pip install tensorflow")
+os.system("pip install keras")
 
 model = keras.models.load_model("model.keras")
 
