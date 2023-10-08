@@ -1,10 +1,11 @@
 import os
-import keras
-import gradio as gr
 
 os.system("pip install --upgrade pip")
 os.system("pip install tensorflow")
 os.system("pip install keras")
+
+import keras
+import gradio as gr
 
 model = keras.models.load_model("model.keras")
 
