@@ -1,4 +1,4 @@
-import keras
+from tensorflow import keras
 import gradio as gr
 
 model = keras.models.load_model("model.h5")
@@ -16,5 +16,4 @@ gr.Interface(
     inputs=gr.Sketchpad(),
     outputs=gr.Label(),
     title="Predict from 0 to 9",
-)
-gr.deploy()
+).launch(debug=True)
