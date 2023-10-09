@@ -1,7 +1,7 @@
 import keras
 import gradio as gr
 
-model = keras.models.load_model("model.keras")
+model = keras.models.load_model("model.h5")
 
 
 def recognize_digit(img):
