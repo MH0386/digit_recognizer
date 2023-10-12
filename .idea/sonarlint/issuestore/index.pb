@@ -15,5 +15,3 @@ G.idea/sonarlint/issuestore/e/d/edfb0f2fb1d93ddd409e3d32ed09812a6ab38247,e\3\e3
 Model/app.py,5\b\5bc85b67d68d5e2e8379e62abc10bb37ae7d38a2
 F
 Model/requirements.txt,d\3\d3432f35c70f54bd4a4dc19d6228e5481308deb6
-A
-Model/model.keras,f\7\f781710d725dddd123e212de7566222b02f4f926
