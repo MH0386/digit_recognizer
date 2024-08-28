@@ -1,20 +1,22 @@
-name: Sync With Hugging Face Hub
-
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+name: Push to huggingface
+on: [push]
 jobs:
-  build:
+  Sync:
     runs-on: ubuntu-latest
+    env:
+      HF_HUB_ENABLE_HF_TRANSFER: 1
     steps:
-    - uses: actions/checkout@v3
-    - name: Sync With Hugging Face Hub
-      uses: nateraw/huggingface-sync-action@v0.0.5
-      with:
-        github_repo_id: 'MH0386/digit_recognizer'
-        huggingface_repo_id: 'MH0386/digit_recognizer'
-        hf_token: ${{ secrets.HF_TOKEN }}
-        subdirectory: 'Model'
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Login to HuggingFace Hub
+        uses: osbm/huggingface-login@v0.0.2
+        with:
+          username: MH0386
+          key: ${{ secrets.HF_TOKEN }}
+          add_to_git_credentials: true
+      - name: Enable hf_transfer
+        run: pip install huggingface_hub[hf_transfer]
+      - name: Check if logged in
+        run: huggingface-cli whoami
+      - name: Upload
+        run: huggingface-cli upload MH0386/digit_recognizer ./Model . --repo-type space
