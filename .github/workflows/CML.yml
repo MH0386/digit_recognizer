@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Setup CML (Continuous Machine Learning)
-      uses: iterative/setup-cml@v2.0.1
+      uses: iterative/setup-cml@v2.1.0
